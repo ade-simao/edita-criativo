@@ -20,44 +20,44 @@ O projeto deverá ser preparado para evoluir futuramente para um website institu
 
 ## Framework
 
-* Next.js (App Router)
+- Next.js (App Router)
 
 ## Linguagem
 
-* TypeScript
+- TypeScript
 
 ## Estilização
 
-* Tailwind CSS
+- Tailwind CSS
 
 ## Componentes
 
-* shadcn/ui
+- shadcn/ui
 
 ## Ícones
 
-* Lucide React
+- Lucide React
 
 ## Animações
 
-* Framer Motion
-* GSAP
+- Framer Motion
+- GSAP
 
 ## Scroll
 
-* Lenis
+- Lenis
 
 ## Gerenciador de Pacotes
 
-* pnpm
+- pnpm
 
 ## Versionamento
 
-* Git + GitHub
+- Git + GitHub
 
 ## Deploy
 
-* Vercel
+- Vercel
 
 ---
 
@@ -95,10 +95,10 @@ Sempre que possível, evitar duplicação de código.
 
 Separação recomendada:
 
-* Componentes de UI
-* Componentes de Layout
-* Componentes específicos das seções
-* Componentes compartilhados
+- Componentes de UI
+- Componentes de Layout
+- Componentes específicos das seções
+- Componentes compartilhados
 
 ---
 
@@ -121,10 +121,10 @@ Seções previstas:
 
 Cada seção deverá possuir:
 
-* objetivo de negócio;
-* objetivo de experiência do utilizador;
-* identidade visual própria;
-* animações específicas quando necessário.
+- objetivo de negócio;
+- objetivo de experiência do utilizador;
+- identidade visual própria;
+- animações específicas quando necessário.
 
 ---
 
@@ -134,11 +134,11 @@ A aplicação será desenvolvida utilizando a abordagem Mobile First.
 
 Todo componente deverá funcionar corretamente em:
 
-* Smartphones
-* Tablets
-* Notebooks
-* Monitores Desktop
-* Monitores Ultra Wide
+- Smartphones
+- Tablets
+- Notebooks
+- Monitores Desktop
+- Monitores Ultra Wide
 
 ---
 
@@ -146,12 +146,12 @@ Todo componente deverá funcionar corretamente em:
 
 Objetivos mínimos:
 
-* Lighthouse superior a 90.
-* Carregamento rápido.
-* Lazy Loading quando aplicável.
-* Otimização de imagens.
-* Otimização de vídeos.
-* Redução de JavaScript desnecessário.
+- Lighthouse superior a 90.
+- Carregamento rápido.
+- Lazy Loading quando aplicável.
+- Otimização de imagens.
+- Otimização de vídeos.
+- Redução de JavaScript desnecessário.
 
 A performance deverá ser considerada desde o início do desenvolvimento.
 
@@ -161,20 +161,20 @@ A performance deverá ser considerada desde o início do desenvolvimento.
 
 Todo o código deverá seguir os seguintes princípios:
 
-* Legibilidade.
-* Simplicidade.
-* Reutilização.
-* Componentização.
-* Responsabilidade única.
-* Baixo acoplamento.
-* Alto nível de organização.
+- Legibilidade.
+- Simplicidade.
+- Reutilização.
+- Componentização.
+- Responsabilidade única.
+- Baixo acoplamento.
+- Alto nível de organização.
 
 Evitar:
 
-* Componentes muito grandes.
-* Código duplicado.
-* Lógica misturada com apresentação.
-* Estilos repetidos.
+- Componentes muito grandes.
+- Código duplicado.
+- Lógica misturada com apresentação.
+- Estilos repetidos.
 
 ---
 
@@ -184,11 +184,11 @@ Todas as nomenclaturas deverão permanecer consistentes durante todo o projeto.
 
 Exemplos:
 
-* Componentes em PascalCase.
-* Hooks iniciados com `use`.
-* Tipos centralizados.
-* Imports organizados.
-* Alias para caminhos internos quando necessário.
+- Componentes em PascalCase.
+- Hooks iniciados com `use`.
+- Tipos centralizados.
+- Imports organizados.
+- Alias para caminhos internos quando necessário.
 
 ---
 
@@ -234,13 +234,13 @@ Cada atualização aprovada deverá gerar automaticamente uma nova versão publi
 
 Antes da conclusão de qualquer funcionalidade deverão ser verificados:
 
-* Responsividade.
-* Performance.
-* Tipagem.
-* ESLint.
-* Build.
-* Navegação.
-* Consistência visual.
+- Responsividade.
+- Performance.
+- Tipagem.
+- ESLint.
+- Build.
+- Navegação.
+- Consistência visual.
 
 Nenhuma funcionalidade será considerada concluída sem atender estes requisitos.
 
@@ -250,14 +250,14 @@ Nenhuma funcionalidade será considerada concluída sem atender estes requisitos
 
 A arquitetura deverá permitir futuras implementações como:
 
-* Área administrativa.
-* CMS.
-* Portfólio dinâmico.
-* Área de clientes.
-* Sistema de autenticação.
-* Integrações externas.
-* Blog.
-* Dashboard.
+- Área administrativa.
+- CMS.
+- Portfólio dinâmico.
+- Área de clientes.
+- Sistema de autenticação.
+- Integrações externas.
+- Blog.
+- Dashboard.
 
 Sem necessidade de reconstrução completa do projeto.
 
@@ -271,11 +271,11 @@ A documentação do projeto será organizada na pasta `docs/`.
 
 Documentos previstos:
 
-* Proposta do Projeto.
-* Briefing Técnico.
-* Design Guidelines.
-* Roadmap.
-* Design System.
+- Proposta do Projeto.
+- Briefing Técnico.
+- Design Guidelines.
+- Roadmap.
+- Design System.
 
 ---
 
@@ -285,10 +285,10 @@ Este projeto deverá priorizar qualidade acima de velocidade.
 
 Cada decisão técnica deverá considerar:
 
-* experiência do utilizador;
-* facilidade de manutenção;
-* escalabilidade;
-* desempenho;
-* consistência visual.
+- experiência do utilizador;
+- facilidade de manutenção;
+- escalabilidade;
+- desempenho;
+- consistência visual.
 
 A landing page deverá representar não apenas os serviços da Edita Criativo, mas também o nível técnico da equipa responsável pelo seu desenvolvimento.

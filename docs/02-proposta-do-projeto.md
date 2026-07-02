@@ -26,12 +26,12 @@ Desenvolver uma landing page de alto padrão que represente a qualidade dos serv
 
 ## Objetivos Específicos
 
-* Apresentar os serviços de forma clara e objetiva.
-* Reforçar a identidade visual da marca.
-* Demonstrar profissionalismo e credibilidade.
-* Facilitar o contacto entre cliente e empresa.
-* Converter visitantes em potenciais clientes.
-* Criar uma base tecnológica preparada para futuras evoluções.
+- Apresentar os serviços de forma clara e objetiva.
+- Reforçar a identidade visual da marca.
+- Demonstrar profissionalismo e credibilidade.
+- Facilitar o contacto entre cliente e empresa.
+- Converter visitantes em potenciais clientes.
+- Criar uma base tecnológica preparada para futuras evoluções.
 
 ---
 
@@ -39,13 +39,13 @@ Desenvolver uma landing page de alto padrão que represente a qualidade dos serv
 
 A landing page será direcionada principalmente para:
 
-* Criadores de conteúdo.
-* Influenciadores digitais.
-* Restaurantes.
-* Hotéis.
-* Pequenas e médias empresas.
-* Marcas pessoais.
-* Empresas que utilizam vídeos como ferramenta de marketing.
+- Criadores de conteúdo.
+- Influenciadores digitais.
+- Restaurantes.
+- Hotéis.
+- Pequenas e médias empresas.
+- Marcas pessoais.
+- Empresas que utilizam vídeos como ferramenta de marketing.
 
 ---
 
@@ -57,12 +57,12 @@ Mais do que editar vídeos, a empresa procura ajudar marcas e criadores a comuni
 
 A comunicação deverá transmitir:
 
-* Profissionalismo
-* Criatividade
-* Confiança
-* Organização
-* Modernidade
-* Qualidade
+- Profissionalismo
+- Criatividade
+- Confiança
+- Organização
+- Modernidade
+- Qualidade
 
 ---
 
@@ -73,8 +73,8 @@ Paleta de cores definida pelo cliente:
 | Cor | Utilização      | Código    |
 | --- | --------------- | --------- |
 | 🟠  | Cor Primária    | `#AE4C16` |
-| ⚫   | Fundo Principal | `#242424` |
-| ⚪   | Cor de Apoio    | `#D2D5D7` |
+| ⚫  | Fundo Principal | `#242424` |
+| ⚪  | Cor de Apoio    | `#D2D5D7` |
 
 A linguagem visual deverá seguir uma estética moderna, premium e cinematográfica, utilizando contrastes, espaçamento adequado, tipografia marcante e animações discretas.
 
@@ -150,22 +150,22 @@ A landing page deverá apresentar os serviços atualmente disponibilizados pela 
 
 ## Plano para Criadores de Conteúdo
 
-* 12 vídeos Reels por mês.
-* Valor: **54.000 Kz**
+- 12 vídeos Reels por mês.
+- Valor: **54.000 Kz**
 
 ---
 
 ## Plano para Empresas
 
-* 8 vídeos longos por mês.
-* Valor: **48.000 Kz**
+- 8 vídeos longos por mês.
+- Valor: **48.000 Kz**
 
 ---
 
 ## Serviços Avulsos
 
-* 1 Reel — **6.500 Kz**
-* 1 Vídeo Longo — **9.000 Kz**
+- 1 Reel — **6.500 Kz**
+- 1 Vídeo Longo — **9.000 Kz**
 
 ---
 
@@ -193,13 +193,13 @@ Esta primeira versão contempla exclusivamente a landing page institucional.
 
 Não fazem parte desta entrega:
 
-* Área de clientes.
-* Sistema administrativo.
-* Gestão de conteúdos.
-* Plataforma de cursos.
-* Sistema de autenticação.
-* Blog.
-* Funcionalidades de e-commerce.
+- Área de clientes.
+- Sistema administrativo.
+- Gestão de conteúdos.
+- Plataforma de cursos.
+- Sistema de autenticação.
+- Blog.
+- Funcionalidades de e-commerce.
 
 Essas funcionalidades poderão ser desenvolvidas em versões futuras.
 
@@ -209,11 +209,11 @@ Essas funcionalidades poderão ser desenvolvidas em versões futuras.
 
 Ao final do projeto, a Edita Criativo deverá possuir uma landing page profissional que:
 
-* fortaleça a imagem da marca;
-* apresente os serviços de forma clara;
-* aumente a credibilidade da empresa;
-* facilite a captação de novos clientes;
-* esteja preparada para futuras expansões sem necessidade de reconstrução da base do projeto.
+- fortaleça a imagem da marca;
+- apresente os serviços de forma clara;
+- aumente a credibilidade da empresa;
+- facilite a captação de novos clientes;
+- esteja preparada para futuras expansões sem necessidade de reconstrução da base do projeto.
 
 ---
 
@@ -221,13 +221,13 @@ Ao final do projeto, a Edita Criativo deverá possuir uma landing page profissio
 
 Como saber se a landing page cumpriu seu papel
 
-* Carregamento rápido.
-* Totalmente responsiva.
-* Navegação intuitiva.
-* Comunicação clara.
-* Visual premium.
-* Facilidade de contacto.
-* Preparada para evolução.
+- Carregamento rápido.
+- Totalmente responsiva.
+- Navegação intuitiva.
+- Comunicação clara.
+- Visual premium.
+- Facilidade de contacto.
+- Preparada para evolução.
 
 ---
 

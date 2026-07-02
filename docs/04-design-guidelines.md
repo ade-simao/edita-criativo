@@ -22,12 +22,12 @@ A landing page deve parecer mais uma **experiência visual interativa** do que u
 
 A marca deve comunicar:
 
-* Criatividade
-* Confiança
-* Profissionalismo
-* Impacto visual
-* Modernidade
-* Precisão
+- Criatividade
+- Confiança
+- Profissionalismo
+- Impacto visual
+- Modernidade
+- Precisão
 
 Tom emocional:
 
@@ -42,15 +42,15 @@ A paleta base já definida será usada com variações de profundidade e contras
 | Cor | Uso                            | Hex       | Visual                                                       |
 | --- | ------------------------------ | --------- | ------------------------------------------------------------ |
 | 🟠  | Primária / Destaques / CTA     | `#AE4C16` | ![#AE4C16](https://via.placeholder.com/20/AE4C16/AE4C16.png) |
-| ⚫   | Fundo principal                | `#242424` | ![#242424](https://via.placeholder.com/20/242424/242424.png) |
-| ⚪   | Texto secundário / superfícies | `#D2D5D7` | ![#D2D5D7](https://via.placeholder.com/20/D2D5D7/D2D5D7.png) |
+| ⚫  | Fundo principal                | `#242424` | ![#242424](https://via.placeholder.com/20/242424/242424.png) |
+| ⚪  | Texto secundário / superfícies | `#D2D5D7` | ![#D2D5D7](https://via.placeholder.com/20/D2D5D7/D2D5D7.png) |
 
 ### Diretrizes de uso
 
-* O fundo principal deve ser predominantemente escuro.
-* O laranja deve ser usado apenas para ações importantes (CTA, destaques).
-* O cinza claro deve equilibrar leitura e contraste.
-* Evitar excesso de cores simultâneas na mesma seção.
+- O fundo principal deve ser predominantemente escuro.
+- O laranja deve ser usado apenas para ações importantes (CTA, destaques).
+- O cinza claro deve equilibrar leitura e contraste.
+- Evitar excesso de cores simultâneas na mesma seção.
 
 ---
 
@@ -60,23 +60,23 @@ A tipografia deve transmitir modernidade e impacto.
 
 ## Títulos
 
-* Fonte sugerida: **Sans serif moderna e geométrica**
-* Características:
+- Fonte sugerida: **Sans serif moderna e geométrica**
+- Características:
 
-  * Alta legibilidade
-  * Peso forte (600–800)
-  * Espaçamento confortável
+  - Alta legibilidade
+  - Peso forte (600–800)
+  - Espaçamento confortável
 
 ## Texto normal
 
-* Fonte neutra e limpa
-* Foco em leitura rápida
+- Fonte neutra e limpa
+- Foco em leitura rápida
 
 ### Diretrizes
 
-* Títulos grandes (impacto visual forte)
-* Subtítulos leves e explicativos
-* Texto curto e direto (evitar blocos longos)
+- Títulos grandes (impacto visual forte)
+- Subtítulos leves e explicativos
+- Texto curto e direto (evitar blocos longos)
 
 ---
 
@@ -86,10 +86,10 @@ O layout deve priorizar **respiração visual**.
 
 ### Princípios:
 
-* Uso forte de espaço negativo
-* Seções bem separadas
-* Layout minimalista e limpo
-* Grid consistente
+- Uso forte de espaço negativo
+- Seções bem separadas
+- Layout minimalista e limpo
+- Grid consistente
 
 ### Regra principal:
 
@@ -101,16 +101,16 @@ O layout deve priorizar **respiração visual**.
 
 ## Elementos principais
 
-* Cards com bordas suaves
-* Sombras leves e difusas
-* Cantos arredondados moderados
-* Separadores sutis
+- Cards com bordas suaves
+- Sombras leves e difusas
+- Cantos arredondados moderados
+- Separadores sutis
 
 ## Fundo
 
-* Base escura uniforme
-* Gradientes suaves em áreas estratégicas
-* Ruído leve (grain opcional) para estética cinematográfica
+- Base escura uniforme
+- Gradientes suaves em áreas estratégicas
+- Ruído leve (grain opcional) para estética cinematográfica
 
 ---
 
@@ -118,15 +118,15 @@ O layout deve priorizar **respiração visual**.
 
 Pode ser utilizado em:
 
-* Cards de planos
-* Menus flutuantes
-* Elementos de destaque
+- Cards de planos
+- Menus flutuantes
+- Elementos de destaque
 
 Regras:
 
-* Sempre com baixa opacidade
-* Sempre com blur leve
-* Nunca comprometer legibilidade
+- Sempre com baixa opacidade
+- Sempre com blur leve
+- Nunca comprometer legibilidade
 
 ---
 
@@ -136,10 +136,10 @@ As animações devem reforçar a sensação de fluidez e qualidade.
 
 ## Diretrizes:
 
-* Entrada suave de elementos ao scroll
-* Micro-interações em botões
-* Transições leves entre seções
-* Evitar exagero ou “efeito chamativo”
+- Entrada suave de elementos ao scroll
+- Micro-interações em botões
+- Transições leves entre seções
+- Evitar exagero ou “efeito chamativo”
 
 ## Princípio:
 
@@ -151,9 +151,9 @@ As animações devem reforçar a sensação de fluidez e qualidade.
 
 A experiência de scroll deve ser contínua e cinematográfica.
 
-* Scroll suave (Lenis)
-* Elementos surgindo progressivamente
-* Ritmo constante de descoberta visual
+- Scroll suave (Lenis)
+- Elementos surgindo progressivamente
+- Ritmo constante de descoberta visual
 
 ---
 
@@ -161,16 +161,16 @@ A experiência de scroll deve ser contínua e cinematográfica.
 
 ## Imagens
 
-* Alta qualidade
-* Foco em storytelling visual
-* Uso estratégico (não decorativo apenas)
+- Alta qualidade
+- Foco em storytelling visual
+- Uso estratégico (não decorativo apenas)
 
 ## Vídeos
 
-* Backgrounds sutis (Hero)
-* Sem áudio
-* Loop suave
-* Otimizado para performance
+- Backgrounds sutis (Hero)
+- Sem áudio
+- Loop suave
+- Otimizado para performance
 
 ---
 
@@ -178,25 +178,25 @@ A experiência de scroll deve ser contínua e cinematográfica.
 
 ## Estilo
 
-* Forte contraste com o fundo
-* Uso da cor primária (#AE4C16)
-* Tamanho confortável para toque
+- Forte contraste com o fundo
+- Uso da cor primária (#AE4C16)
+- Tamanho confortável para toque
 
 ## Comportamento
 
-* Hover suave
-* Feedback visual claro
-* Foco em conversão
+- Hover suave
+- Feedback visual claro
+- Foco em conversão
 
 ---
 
 # 12. Componentes principais
 
-* Cards de planos
-* Seções com grid responsivo
-* Hero com impacto visual forte
-* FAQ em formato accordion
-* Testimonials em slider
+- Cards de planos
+- Seções com grid responsivo
+- Hero com impacto visual forte
+- FAQ em formato accordion
+- Testimonials em slider
 
 ---
 
@@ -221,8 +221,8 @@ A landing page deve parecer:
 
 Não deve parecer:
 
-* Um site genérico
-* Um template
-* Uma página corporativa tradicional
+- Um site genérico
+- Um template
+- Uma página corporativa tradicional
 
 ---

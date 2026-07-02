@@ -16,12 +16,12 @@ Este design system será a base para todos os componentes da interface.
 
 # 2. Princípios do Sistema
 
-* Consistência visual
-* Reutilização de componentes
-* Hierarquia clara
-* Simplicidade
-* Escalabilidade
-* Performance visual (sem excessos)
+- Consistência visual
+- Reutilização de componentes
+- Hierarquia clara
+- Simplicidade
+- Escalabilidade
+- Performance visual (sem excessos)
 
 ---
 
@@ -33,7 +33,7 @@ Este design system será a base para todos os componentes da interface.
 | ---------- | ---------------------- | ---------------------- |
 | primary    | CTAs, destaques        | `#AE4C16`              |
 | background | fundo principal        | `#242424`              |
-| surface    | cards / áreas elevadas | `#2E2E2E` *(variação)* |
+| surface    | cards / áreas elevadas | `#2E2E2E` _(variação)_ |
 | text-muted | textos secundários     | `#D2D5D7`              |
 
 ---
@@ -42,15 +42,15 @@ Este design system será a base para todos os componentes da interface.
 
 Sistema baseado em múltiplos de 4:
 
-* 4px
-* 8px
-* 12px
-* 16px
-* 24px
-* 32px
-* 48px
-* 64px
-* 96px
+- 4px
+- 8px
+- 12px
+- 16px
+- 24px
+- 32px
+- 48px
+- 64px
+- 96px
 
 ---
 
@@ -58,14 +58,14 @@ Sistema baseado em múltiplos de 4:
 
 ### Títulos
 
-* Peso: 600–800
-* Tamanho: grande e expressivo
-* Uso: impacto visual
+- Peso: 600–800
+- Tamanho: grande e expressivo
+- Uso: impacto visual
 
 ### Texto
 
-* Peso: 300–400
-* Uso: leitura contínua
+- Peso: 300–400
+- Uso: leitura contínua
 
 ### Regra principal
 
@@ -79,17 +79,17 @@ Sistema baseado em múltiplos de 4:
 
 ### Variantes:
 
-* primary
-* secondary
-* outline
-* ghost
+- primary
+- secondary
+- outline
+- ghost
 
 ### Estados:
 
-* default
-* hover
-* active
-* disabled
+- default
+- hover
+- active
+- disabled
 
 ---
 
@@ -97,16 +97,16 @@ Sistema baseado em múltiplos de 4:
 
 Usado em:
 
-* planos
-* serviços
-* depoimentos
+- planos
+- serviços
+- depoimentos
 
 Características:
 
-* bordas suaves
-* leve sombra
-* fundo semi-escuro
-* hover com elevação leve
+- bordas suaves
+- leve sombra
+- fundo semi-escuro
+- hover com elevação leve
 
 ---
 
@@ -116,19 +116,19 @@ Componente estrutural de todas as seções.
 
 Características:
 
-* padding vertical consistente
-* largura centralizada
-* suporte a background alternado
+- padding vertical consistente
+- largura centralizada
+- suporte a background alternado
 
 ---
 
 ## 4.4 Typography System
 
-* H1 → Hero principal
-* H2 → títulos de seção
-* H3 → subtítulos
-* p → texto padrão
-* small → textos auxiliares
+- H1 → Hero principal
+- H2 → títulos de seção
+- H3 → subtítulos
+- p → texto padrão
+- small → textos auxiliares
 
 ---
 
@@ -136,24 +136,24 @@ Características:
 
 ## 5.1 Estética geral
 
-* Cinematográfica
-* Escura
-* Minimalista
-* Premium
+- Cinematográfica
+- Escura
+- Minimalista
+- Premium
 
 ---
 
 ## 5.2 Bordas
 
-* Radius leve a moderado (8px a 16px)
+- Radius leve a moderado (8px a 16px)
 
 ---
 
 ## 5.3 Sombras
 
-* suaves
-* difusas
-* nunca agressivas
+- suaves
+- difusas
+- nunca agressivas
 
 ---
 
@@ -161,9 +161,9 @@ Características:
 
 Uso limitado:
 
-* cards de destaque
-* pricing
-* overlays
+- cards de destaque
+- pricing
+- overlays
 
 ---
 
@@ -171,15 +171,15 @@ Uso limitado:
 
 ## Direção
 
-* suaves
-* baseadas em scroll
-* não intrusivas
+- suaves
+- baseadas em scroll
+- não intrusivas
 
 ## Regras
 
-* nunca atrasar interação
-* nunca distrair do conteúdo
-* sempre reforçar hierarquia
+- nunca atrasar interação
+- nunca distrair do conteúdo
+- sempre reforçar hierarquia
 
 ---
 
@@ -187,17 +187,17 @@ Uso limitado:
 
 ## Grid
 
-* 12 colunas (desktop)
-* 6 colunas (tablet)
-* 4 colunas (mobile)
+- 12 colunas (desktop)
+- 6 colunas (tablet)
+- 4 colunas (mobile)
 
 ---
 
 ## Estrutura
 
-* máximo de 1200–1280px de largura
-* centralizado
-* muito espaço negativo
+- máximo de 1200–1280px de largura
+- centralizado
+- muito espaço negativo
 
 ---
 
@@ -205,22 +205,22 @@ Uso limitado:
 
 ## Hover
 
-* leve aumento de escala (1.02–1.05)
-* mudança de opacidade
-* transição suave
+- leve aumento de escala (1.02–1.05)
+- mudança de opacidade
+- transição suave
 
 ## Focus
 
-* visível e acessível
-* contorno discreto
+- visível e acessível
+- contorno discreto
 
 ---
 
 # 9. Imagens e Vídeos
 
-* sempre otimizados
-* uso estratégico
-* nunca decorativos sem propósito
+- sempre otimizados
+- uso estratégico
+- nunca decorativos sem propósito
 
 ---
 

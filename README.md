@@ -26,9 +26,9 @@ O objetivo deste projeto é apresentar os serviços da empresa, fortalecer sua p
 
 Antes de executar o projeto, certifique-se de possuir instalado:
 
-* Node.js **22 LTS** ou superior (recomendado: **24.x**)
-* pnpm
-* Git
+- Node.js **22 LTS** ou superior (recomendado: **24.x**)
+- pnpm
+- Git
 
 ---
 
@@ -103,14 +103,14 @@ http://localhost:3000
 
 ### Organização
 
-* **app/** → Estrutura principal da aplicação.
-* **components/** → Todos os componentes reutilizáveis.
-* **hooks/** → Hooks personalizados.
-* **lib/** → Funções auxiliares e configurações.
-* **types/** → Interfaces e tipos globais.
-* **public/** → Recursos estáticos.
-* **styles/** → Estilos globais.
-* **docs/** → Toda a documentação do projeto.
+- **app/** → Estrutura principal da aplicação.
+- **components/** → Todos os componentes reutilizáveis.
+- **hooks/** → Hooks personalizados.
+- **lib/** → Funções auxiliares e configurações.
+- **types/** → Interfaces e tipos globais.
+- **public/** → Recursos estáticos.
+- **styles/** → Estilos globais.
+- **docs/** → Toda a documentação do projeto.
 
 ---
 
@@ -118,8 +118,8 @@ http://localhost:3000
 
 ## Branches principais
 
-* `main` → Produção
-* `develop` → Desenvolvimento
+- `main` → Produção
+- `develop` → Desenvolvimento
 
 ## Branches temporárias
 
@@ -170,11 +170,11 @@ chore: configura Husky
 
 O projeto seguirá padrões modernos de desenvolvimento utilizando:
 
-* ESLint
-* Prettier
-* Husky
-* lint-staged
-* Commitlint
+- ESLint
+- Prettier
+- Husky
+- lint-staged
+- Commitlint
 
 Antes de cada commit serão executadas verificações automáticas para garantir a qualidade e a consistência do código.
 
