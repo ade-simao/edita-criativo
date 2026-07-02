@@ -12,10 +12,10 @@ Este documento descreve a estrutura visual e funcional de cada seção da landin
 
 Ele serve como guia para:
 
-* desenvolvimento das seções
-* consistência visual
-* alinhamento da equipa
-* implementação futura no código
+- desenvolvimento das seções
+- consistência visual
+- alinhamento da equipa
+- implementação futura no código
 
 ---
 
@@ -65,10 +65,10 @@ Capturar atenção em até 3 segundos e comunicar valor imediato.
 
 ## Explicação
 
-* Vídeo de fundo cria impacto visual
-* Título comunica valor direto
-* Botões guiam ação imediata
-* Layout centralizado com foco total no texto
+- Vídeo de fundo cria impacto visual
+- Título comunica valor direto
+- Botões guiam ação imediata
+- Layout centralizado com foco total no texto
 
 ---
 
@@ -90,17 +90,17 @@ Explicar rapidamente o que a empresa faz.
 
 ## Explicação
 
-* Cada card representa um tipo de cliente
-* Estrutura simples e direta
-* Foco em compreensão rápida
+- Cada card representa um tipo de cliente
+- Estrutura simples e direta
+- Foco em compreensão rápida
 
 ### O que é um CARD?
 
 Um bloco visual que agrupa:
 
-* ícone
-* título
-* descrição curta
+- ícone
+- título
+- descrição curta
 
 ---
 
@@ -123,9 +123,9 @@ Humanizar a marca e gerar credibilidade.
 
 ## Explicação
 
-* Layout dividido (imagem + texto)
-* Foto transmite identidade real
-* Texto gera conexão emocional
+- Layout dividido (imagem + texto)
+- Foto transmite identidade real
+- Texto gera conexão emocional
 
 ---
 
@@ -155,8 +155,8 @@ Mostrar por que escolher a Edita Criativo.
 [ D ] [ E ] [ F ]
 ```
 
-* Estrutura organizada em 2 linhas e 3 colunas
-* Cada item representa um diferencial
+- Estrutura organizada em 2 linhas e 3 colunas
+- Cada item representa um diferencial
 
 ---
 
@@ -178,9 +178,9 @@ Mostrar resultados reais.
 
 ## Explicação
 
-* vídeos reais ou mockups
-* hover para preview
-* foco em prova de qualidade
+- vídeos reais ou mockups
+- hover para preview
+- foco em prova de qualidade
 
 ---
 
@@ -232,10 +232,11 @@ Explicar o processo de forma clara, sequencial e visualmente memorável.
 ```
 
 Uma timeline vertical interativa com alternância visual. Cada etapa alterna lado:
-* direita
-* esquerda
-* direita
-* esquerda
+
+- direita
+- esquerda
+- direita
+- esquerda
 
 ---
 
@@ -257,8 +258,8 @@ Apresentar opções de compra.
 
 ## Explicação
 
-* plano central destacado
-* cada card contém preço + benefícios
+- plano central destacado
+- cada card contém preço + benefícios
 
 ---
 
@@ -286,8 +287,8 @@ Gerar confiança.
 [ A ] → [ B ] → [ C ]
 ```
 
-* elementos passam horizontalmente
-* interação automática ou manual
+- elementos passam horizontalmente
+- interação automática ou manual
 
 ---
 
@@ -321,9 +322,9 @@ Pergunta 2 [+]
 ↓ abre resposta
 ```
 
-* cada item expande ao clicar
-* economiza espaço
-* melhora leitura
+- cada item expande ao clicar
+- economiza espaço
+- melhora leitura
 
 ---
 
@@ -423,10 +424,10 @@ Este wireframe não define estilo visual final.
 
 Ele define apenas:
 
-* estrutura
-* hierarquia
-* organização
-* intenção de cada seção
+- estrutura
+- hierarquia
+- organização
+- intenção de cada seção
 
 O design system será responsável por transformar isso em interface real.
 
