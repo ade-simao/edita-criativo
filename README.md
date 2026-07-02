@@ -218,11 +218,11 @@ Cada alteração aprovada na branch `main` poderá ser publicada automaticamente
 
 ### Tech Lead
 
-👦 André Simão → <ade-simao>
+👦 André Simão → github.com/ade-simao
 
 ### Colaboradores (Júnior)
 
-👦 Josemar → <fa-n°1>
+👦 Josemar → github.com/fa-n°1
 
 ---
 
