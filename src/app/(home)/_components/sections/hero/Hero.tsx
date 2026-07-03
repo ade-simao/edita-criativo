@@ -25,10 +25,13 @@ export function Hero() {
         playsInline
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source
+          src="https://cdn.pixabay.com/video/2023/08/31/178565-860270644_large.mp4"
+          type="video/mp4"
+        />
       </video>
 
-      <div className="absolute inset-0 -z-10 bg-black/65" />
+      <div className="absolute inset-0 -z-10 bg-black/70" />
 
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/30 via-black/60 to-background" />
 
@@ -56,7 +59,9 @@ export function Hero() {
           </Text>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-            <Button size="lg">Solicitar orçamento</Button>
+            <Button size="lg" className="text-white">
+              Solicitar orçamento
+            </Button>
 
             <Button size="lg" variant="outline">
               Ver trabalhos
