@@ -5,6 +5,7 @@ import { HowItWorks } from "./_components/sections/how-it-works";
 import { Portfolio } from "./_components/sections/portfolio";
 import { Pricing } from "./_components/sections/pricing";
 import { Services } from "./_components/sections/services";
+import { Testimonials } from "./_components/sections/testimonials";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Portfolio />
       <HowItWorks />
       <Pricing />
+      <Testimonials />
     </main>
   );
 }
