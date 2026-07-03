@@ -19,12 +19,12 @@ export const faqs = [
       "O pagamento é definido no orçamento e pode ser dividido conforme o projeto.",
   },
   {
-    question: "Quanto tempo demora um projeto?",
+    question: "Quanto tempo leva um projeto?",
     answer:
       "Depende da complexidade, mas a maioria é entregue entre 2 e 7 dias úteis.",
   },
   {
-    question: "Posso pedir alterações?",
+    question: "Será que posso pedir alterações?",
     answer:
       "Sim. Todos os projetos incluem rodadas de revisão conforme o briefing.",
   },
