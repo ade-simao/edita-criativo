@@ -13,7 +13,7 @@ export function AboutImage() {
       className="relative aspect-square overflow-hidden rounded-3xl"
     >
       <Image
-        src="/images/about.jpg"
+        src="/images/about/morais.jpg"
         alt="Edita Criativo"
         fill
         className="object-top"
