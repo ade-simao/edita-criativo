@@ -83,30 +83,50 @@ http://localhost:3000
 # 📂 Estrutura do Projeto
 
 ```text
-.
-├── app/                  # Rotas, páginas e layouts (App Router)
-├── components/           # Componentes reutilizáveis da aplicação
-│   ├── ui/               # Componentes base (shadcn/ui)
-│   ├── layout/           # Navbar, Footer, Containers...
-│   ├── sections/         # Hero, Services, Portfolio...
-│   └── shared/           # Componentes compartilhados
+src/
+├── public/          # Imagens, vídeos, ícones e assets
+├── app/
+│   ├── (home)/
+│   │   ├── page.tsx
+│   │   ├── _components/
+│   │   │   └── sections/
+│   │   └── ...
+│   ├── layout.tsx
+│   └── globals.css
 │
-├── hooks/                # Hooks customizados
-├── lib/                  # Funções utilitárias e configurações
-├── types/                # Tipagens globais
-├── public/               # Imagens, vídeos, ícones e assets
-├── styles/               # Estilos globais
-├── docs/                 # Documentação do projeto
-├── .github/              # Templates e workflows (quando necessário)
-└── ...
+├── components/
+│   ├── ui/          # Componentes base (shadcn/ui)
+│   ├── layout/      # Navbar, Footer, Container, Section...
+│   └── shared/      # Componentes reutilizáveis entre páginas
+│
+├── hooks/
+├── lib/
+├── types/
+├── utils/
+├── styles/
+└── docs/
 ```
 
 ### Organização
 
+A arquitetura do projeto segue o princípio de **colocalização (Colocation)**.
+
+Componentes específicos de uma página permanecem próximos da própria página, facilitando manutenção, organização e escalabilidade.
+
+Assim:
+
+- `app/(home)/_components/` contém apenas componentes exclusivos da Home.
+- `src/components/ui/` concentra os componentes base reutilizáveis (shadcn/ui).
+- `src/components/layout/` reúne componentes estruturais compartilhados entre páginas.
+- `src/components/shared/` contém componentes reutilizados em diferentes partes da aplicação.
+
+Essa organização evita que a pasta global de componentes cresça desnecessariamente com elementos utilizados por apenas uma página, mantendo a arquitetura preparada para futuras expansões, como Blog, Dashboard, Área de Clientes e outras rotas independentes.
+
 - **app/** → Estrutura principal da aplicação.
 - **components/** → Todos os componentes reutilizáveis.
 - **hooks/** → Hooks personalizados.
-- **lib/** → Funções auxiliares e configurações.
+- **lib/** → Funções de configurações.
+- **utils/** → Funções auxiliares.
 - **types/** → Interfaces e tipos globais.
 - **public/** → Recursos estáticos.
 - **styles/** → Estilos globais.

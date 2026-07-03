@@ -70,17 +70,28 @@ Cada responsabilidade deverá estar isolada em sua própria camada, facilitando 
 A estrutura inicial sugerida é:
 
 ```text
-app/
-components/
-features/
-hooks/
-lib/
-services/
-types/
-utils/
-public/
-styles/
-docs/
+src/
+├── public/          # Imagens, vídeos, ícones e assets
+├── app/
+│   ├── (home)/
+│   │   ├── page.tsx
+│   │   ├── _components/
+│   │   │   └── sections/
+│   │   └── ...
+│   ├── layout.tsx
+│   └── globals.css
+│
+├── components/
+│   ├── ui/          # Componentes base (shadcn/ui)
+│   ├── layout/      # Navbar, Footer, Container, Section...
+│   └── shared/      # Componentes reutilizáveis entre páginas
+│
+├── hooks/
+├── lib/
+├── types/
+├── utils/
+├── styles/
+└── docs/
 ```
 
 A estrutura poderá evoluir conforme a necessidade do projeto.
