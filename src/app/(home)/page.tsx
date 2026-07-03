@@ -1,3 +1,4 @@
+import { About } from "./_components/sections/about";
 import { Hero } from "./_components/sections/hero";
 import { Services } from "./_components/sections/services";
 
@@ -6,6 +7,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <Services />
+      <About />
     </main>
   );
 }
