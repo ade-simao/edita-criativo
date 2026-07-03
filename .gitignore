@@ -42,3 +42,4 @@ next-env.d.ts
 
 # Mine
 docs/00-sprint-**
+docs/*-snippets.md
