@@ -15,7 +15,7 @@ export function Navbar() {
     <header className="absolute inset-x-0 top-0 z-50">
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          Edita<span className="text-primary">Criativo</span>
+          Edita <span className="text-primary">Criativo</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

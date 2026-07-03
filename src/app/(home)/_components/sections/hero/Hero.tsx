@@ -1,9 +1,14 @@
-import { Navbar } from "../../Navbar";
+"use client";
+
+import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
+
+import { Navbar } from "../../Navbar";
 
 export function Hero() {
   return (
@@ -13,38 +18,73 @@ export function Hero() {
       {/* Background */}
       <div className="absolute inset-0 -z-20 bg-neutral-950" />
 
-      {/* TODO: substituir por vídeo */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#AE4C1625,transparent_60%)]" />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
 
-      {/* Overlay */}
       <div className="absolute inset-0 -z-10 bg-black/65" />
 
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/30 via-black/60 to-background" />
+
       <Container>
-        <div className="flex min-h-screen flex-col items-center justify-center text-center">
-          <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex min-h-screen flex-col items-center justify-center text-center"
+        >
+          {/* <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
             Edita Criativo
-          </span>
+          </span> */}
 
           <Heading
             as="h1"
-            className="max-w-5xl max-h-full text-5xl font-extrabold leading-tight md:text-7xl xl:text-7xl"
+            className="max-w-5xl text-4xl font-extrabold md:text-7xl xl:text-7xl 2xl:text-8xl"
           >
             Transformamos vídeos em conteúdos que prendem atenção.
           </Heading>
 
           <Text className="mt-8 max-w-2xl text-lg md:text-xl">
-            Edição profissional para criadores de conteúdo, empresas e marcas
-            que procuram elevar a qualidade da sua comunicação digital.
+            Edição profissional para criadores, empresas e marcas que querem
+            comunicar com mais impacto.
           </Text>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
             <Button size="lg">Solicitar orçamento</Button>
 
-            <Button variant="outline" size="lg">
+            <Button size="lg" variant="outline">
               Ver trabalhos
             </Button>
           </div>
-        </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        >
+          <div className="flex flex-col items-center gap-2 text-muted-foreground">
+            <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
+
+            <div className="h-10 w-5 rounded-full border border-white/30 p-1">
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.5,
+                }}
+                className="h-2 w-2 mx-auto rounded-full bg-primary"
+              />
+            </div>
+          </div>
+        </motion.div>
       </Container>
     </Section>
   );
