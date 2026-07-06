@@ -1,3 +1,14 @@
+import Link from "next/link";
+
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa6";
+
+import { Mail } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 import { Container } from "@/components/layout/Container";
@@ -21,6 +32,38 @@ export function FinalCTA() {
         <Button size="lg" className="mt-10">
           Solicitar orçamento
         </Button>
+
+        <div className="mt-24 border-t border-border/50 pt-10">
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            <Link href="#" className="transition hover:text-primary">
+              <FaInstagram size={20} />
+            </Link>
+
+            <Link href="#" className="transition hover:text-primary">
+              <FaFacebookF size={18} />
+            </Link>
+
+            <Link href="#" className="transition hover:text-primary">
+              <FaLinkedinIn size={18} />
+            </Link>
+
+            <Link href="#" className="transition hover:text-primary">
+              <FaWhatsapp size={20} />
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-col items-center gap-3 text-sm text-muted-foreground">
+            <a
+              href="mailto:contato@editacriativo.com"
+              className="flex items-center gap-2 hover:text-primary"
+            >
+              <Mail size={16} />
+              contato@editacriativo.com
+            </a>
+
+            <p>© 2026 Edita Criativo. Todos os direitos reservados.</p>
+          </div>
+        </div>
       </Container>
     </Section>
   );
