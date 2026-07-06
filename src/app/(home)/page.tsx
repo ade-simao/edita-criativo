@@ -1,3 +1,4 @@
+import { Navbar } from "./_components/Navbar";
 import { About } from "./_components/sections/about";
 import { Differentials } from "./_components/sections/differentials";
 import { FAQ } from "./_components/sections/faq";
@@ -12,6 +13,7 @@ import { Testimonials } from "./_components/sections/testimonials";
 export default function HomePage() {
   return (
     <main>
+      <Navbar />
       <Hero />
       <Services />
       <About />

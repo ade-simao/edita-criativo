@@ -13,8 +13,6 @@ import { Navbar } from "../../Navbar";
 export function Hero() {
   return (
     <Section className="relative flex min-h-screen items-center overflow-hidden py-0">
-      <Navbar />
-
       {/* Background */}
       <div className="absolute inset-0 -z-20 bg-neutral-950" />
 
