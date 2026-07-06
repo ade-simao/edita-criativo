@@ -9,6 +9,8 @@ import { useActiveSection } from "@/hooks/useActiveSection";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
 
+import { whatsapp } from "@/constants/contact";
+
 const links = [
   { id: "services", label: "Serviços" },
   { id: "about", label: "Quem Somos" },
@@ -63,8 +65,16 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Button className="transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] active:scale-95">
-          Orçamento
+        <Button
+          asChild
+          className="transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] active:scale-95"
+        >
+          <Link
+            href={whatsapp("Olá! Vim pelo site e gostaria de um orçamento.")}
+            target="_blank"
+          >
+            Falar agora
+          </Link>
         </Button>
       </Container>
     </header>

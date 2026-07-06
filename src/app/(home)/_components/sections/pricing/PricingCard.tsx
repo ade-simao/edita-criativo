@@ -1,8 +1,12 @@
 "use client";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { Check } from "./data";
 import { Button } from "@/components/ui/button";
+
+import { whatsapp } from "@/constants/contact";
 
 type Props = {
   title: string;
@@ -49,8 +53,13 @@ export function PricingCard({
         ))}
       </ul>
 
-      <Button className="mt-10 w-full" size="lg">
-        Solicitar orçamento
+      <Button asChild className="mt-10 w-full">
+        <Link
+          href={whatsapp(`Olá! Tenho interesse no plano ${title}.`)}
+          target="_blank"
+        >
+          Solicitar orçamento
+        </Link>
       </Button>
     </motion.article>
   );

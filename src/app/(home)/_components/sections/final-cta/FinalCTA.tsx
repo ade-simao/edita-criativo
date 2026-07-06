@@ -9,12 +9,13 @@ import {
 
 import { Mail } from "lucide-react";
 
+import { Container } from "@/components/layout/Container";
+import { Section } from "@/components/layout/Section";
+import { Heading } from "@/components/typography/Heading";
+import { Text } from "@/components/typography/Text";
 import { Button } from "@/components/ui/button";
 
-import { Container } from "@/components/layout/Container";
-import { Heading } from "@/components/typography/Heading";
-import { Section } from "@/components/layout/Section";
-import { Text } from "@/components/typography/Text";
+import { CONTACT, whatsapp } from "@/constants/contact";
 
 export function FinalCTA() {
   return (
@@ -29,36 +30,57 @@ export function FinalCTA() {
           projeto.
         </Text>
 
-        <Button size="lg" className="mt-10">
-          Solicitar orçamento
+        <Button asChild size="lg" className="mt-10">
+          <Link
+            href={whatsapp("Olá! Gostaria de conversar sobre um projeto.")}
+            target="_blank"
+          >
+            Solicitar orçamento
+          </Link>
         </Button>
 
         <div className="mt-24 border-t border-border/50 pt-10">
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="#" className="transition hover:text-primary">
+            <Link
+              href={CONTACT.social.instagram}
+              target="_blank"
+              className="transition hover:text-primary"
+            >
               <FaInstagram size={20} />
             </Link>
 
-            <Link href="#" className="transition hover:text-primary">
+            <Link
+              href={CONTACT.social.facebook}
+              target="_blank"
+              className="transition hover:text-primary"
+            >
               <FaFacebookF size={18} />
             </Link>
 
-            <Link href="#" className="transition hover:text-primary">
+            <Link
+              href={CONTACT.social.linkedin}
+              target="_blank"
+              className="transition hover:text-primary"
+            >
               <FaLinkedinIn size={18} />
             </Link>
 
-            <Link href="#" className="transition hover:text-primary">
+            <Link
+              href={CONTACT.social.instagram}
+              target="_blank"
+              className="transition hover:text-primary"
+            >
               <FaWhatsapp size={20} />
             </Link>
           </div>
 
           <div className="mt-8 flex flex-col items-center gap-3 text-sm text-muted-foreground">
             <a
-              href="mailto:contato@editacriativo.com"
+              href={`mailto:${CONTACT.email}`}
               className="flex items-center gap-2 hover:text-primary"
             >
               <Mail size={16} />
-              contato@editacriativo.com
+              {CONTACT.email}
             </a>
 
             <p>© 2026 Edita Criativo. Todos os direitos reservados.</p>

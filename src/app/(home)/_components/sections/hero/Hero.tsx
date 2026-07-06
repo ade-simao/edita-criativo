@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
@@ -8,7 +9,7 @@ import { Section } from "@/components/layout/Section";
 import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
 
-import { Navbar } from "../../Navbar";
+import { CONTACT, whatsapp } from "@/constants/contact";
 
 export function Hero() {
   return (
@@ -58,12 +59,19 @@ export function Hero() {
           </Text>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" className="text-white">
-              Solicitar orçamento
+            <Button size="lg" asChild>
+              <Link
+                href={whatsapp("Olá! Gostaria de solicitar um orçamento.")}
+                target="_blank"
+              >
+                Solicitar orçamento
+              </Link>
             </Button>
 
-            <Button size="lg" variant="outline">
-              Ver trabalhos
+            <Button size="lg" variant="outline" asChild>
+              <Link href={CONTACT.social.instagram} target="_blank">
+                Ver trabalhos
+              </Link>
             </Button>
           </div>
         </motion.div>
