@@ -13,7 +13,9 @@ export function Services() {
     <Section id="services" className="bg-background">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <Heading>Soluções para quem leva conteúdo a sério.</Heading>
+          <Heading className="font-semibold uppercase tracking-[.3em] text-primary">
+            Soluções para quem leva conteúdo a sério.
+          </Heading>
 
           <Text className="mt-6">
             Independentemente do tamanho do seu projeto, entregamos edições
@@ -21,7 +23,7 @@ export function Services() {
           </Text>
         </div>
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
           ))}

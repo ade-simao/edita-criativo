@@ -10,7 +10,7 @@ export function AboutImage() {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="relative aspect-square overflow-hidden rounded-3xl"
+      className="relative aspect-square max-w-xl w-full mx-auto overflow-hidden rounded-3xl"
     >
       <Image
         src="/images/about/morais.jpg"

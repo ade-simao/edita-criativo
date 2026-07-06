@@ -12,7 +12,7 @@ import { TestimonialCard } from "./TestimonialCard";
 
 export function Testimonials() {
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" className="overflow-hidden">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <Heading className="font-semibold uppercase tracking-[.3em] text-primary">
@@ -27,11 +27,11 @@ export function Testimonials() {
         <motion.div
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 20,
+            duration: 35,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="mt-20 flex gap-8"
+          className="mt-20 flex w-max gap-6 lg:gap-8"
         >
           {[...testimonials, ...testimonials].map((item, index) => (
             <TestimonialCard key={index} {...item} />

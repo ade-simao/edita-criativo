@@ -20,7 +20,7 @@ export function ServiceCard({ icon: Icon, title, description, index }: Props) {
         duration: 0.6,
         delay: index * 0.15,
       }}
-      className="group rounded-2xl border border-border bg-card/60 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40"
+      className="group h-full rounded-2xl border border-border bg-card/60 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40"
     >
       <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
         <Icon className="h-7 w-7 text-primary" />

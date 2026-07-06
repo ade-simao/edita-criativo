@@ -21,7 +21,7 @@ export function PortfolioCard({ title, category, thumbnail, index }: Props) {
         delay: index * 0.12,
         duration: 0.6,
       }}
-      className="group relative aspect-9/16 overflow-hidden rounded-3xl"
+      className="group relative aspect-4/5 lg:aspect-9/16 overflow-hidden rounded-3xl"
     >
       <Image
         src={thumbnail}

@@ -29,18 +29,21 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
     <motion.div
       initial={{
         opacity: 0,
-        x: reverse ? 80 : -80,
+        y: 40,
+        scale: 0.96,
       }}
       whileInView={{
         opacity: 1,
-        x: 0,
+        y: 0,
+        scale: 1,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
       }}
       viewport={{
         once: false,
         amount: 0.4,
-      }}
-      transition={{
-        duration: 0.7,
       }}
       className="relative"
     >

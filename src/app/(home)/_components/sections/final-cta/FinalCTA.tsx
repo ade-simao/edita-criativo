@@ -21,16 +21,16 @@ export function FinalCTA() {
   return (
     <Section className="relative overflow-hidden">
       <Container className="text-center">
-        <Heading className="font-semibold capitalize tracking-[.2em] text-3xl text-primary mx-auto max-w-4xl">
+        <Heading className="font-semibold capitalize tracking-[.2em] text-3xl text-primary mx-auto max-w-3xl">
           Vamos transformar o seu próximo vídeo em algo memorável.
         </Heading>
 
-        <Text className="mx-auto mt-6 max-w-2xl">
+        <Text className="mx-auto mt-6 max-w-xl">
           Entre em contacto e receba um orçamento personalizado para o seu
           projeto.
         </Text>
 
-        <Button asChild size="lg" className="mt-10">
+        <Button asChild size="lg" className="mt-10 px-10 w-full sm:w-auto">
           <Link
             href={whatsapp("Olá! Gostaria de conversar sobre um projeto.")}
             target="_blank"

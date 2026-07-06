@@ -43,7 +43,7 @@ export function PricingCard({
 
       <p className="mt-8 text-4xl font-extrabold text-primary">{price}</p>
 
-      <ul className="mt-8 space-y-4">
+      <ul className="mt-8 mb-10 space-y-4">
         {features.map((item) => (
           <li key={item} className="flex items-center gap-3">
             <Check size={18} className="text-primary" />
@@ -53,7 +53,7 @@ export function PricingCard({
         ))}
       </ul>
 
-      <Button asChild className="mt-10 w-full">
+      <Button asChild className="mt-auto w-full">
         <Link
           href={whatsapp(`Olá! Tenho interesse no plano ${title}.`)}
           target="_blank"

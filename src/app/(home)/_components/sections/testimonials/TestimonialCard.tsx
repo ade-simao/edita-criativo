@@ -9,7 +9,7 @@ type Props = {
 
 export function TestimonialCard({ name, role, image, comment }: Props) {
   return (
-    <article className="min-w-95 rounded-3xl border border-border bg-card/60 p-8 backdrop-blur">
+    <article className="w-75 sm:w-85 lg:w-95 shrink-0 rounded-3xl border border-border bg-card/60 p-8 backdrop-blur">
       <p className="leading-8 text-muted-foreground">{comment}</p>
 
       <div className="mt-8 flex items-center gap-4">

@@ -22,7 +22,7 @@ export function Pricing() {
           </Text>
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3 h-full">
           {plans.map((plan, index) => (
             <PricingCard key={plan.title} index={index} {...plan} />
           ))}
