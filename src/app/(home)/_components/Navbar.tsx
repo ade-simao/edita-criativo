@@ -27,7 +27,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
-          ? "border-b border-border/50 bg-background/80 backdrop-blur-xl shadow-sm"
+          ? "border-b border-border/50 bg-background/80 backdrop-blur-xl shadow-xl"
           : "bg-transparent",
       )}
     >
@@ -37,7 +37,10 @@ export function Navbar() {
           scrolled ? "py-3" : "py-5",
         )}
       >
-        <Link href="/" className="text-xl font-bold">
+        <Link
+          href="/"
+          className="text-xl font-bold transition-all duration-300 hover:scale-110"
+        >
           Edita<span className="text-primary">Criativo</span>
         </Link>
 
@@ -67,7 +70,7 @@ export function Navbar() {
 
         <Button
           asChild
-          className="transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] active:scale-95"
+          className="transition-all duration-300 hover:scale-110 active:scale-95"
         >
           <Link
             href={whatsapp("Olá! Vim pelo site e gostaria de um orçamento.")}

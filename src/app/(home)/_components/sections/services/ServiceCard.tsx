@@ -18,11 +18,12 @@ export function ServiceCard({ icon: Icon, title, description, index }: Props) {
       viewport={{ once: false, amount: 0.3 }}
       transition={{
         duration: 0.6,
-        ease: "easeIn",
+        delay: index * 0.2,
+        ease: "easeOut",
       }}
       className="group h-full"
     >
-      <div className="w-full h-full rounded-2xl border border-border bg-card/60 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 p-8 ">
+      <div className="w-full h-full p-8 rounded-3xl border border-border bg-card/60 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[0_0_40px_rgba(174,76,22,.15)]">
         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
           <Icon className="h-7 w-7 text-primary" />
         </div>

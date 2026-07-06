@@ -16,10 +16,11 @@ export function PortfolioCard({ title, category, thumbnail, index }: Props) {
     <motion.article
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{
-        delay: index * 0.12,
         duration: 0.6,
+        delay: index * 0.2,
+        ease: "easeOut",
       }}
       className="group relative aspect-4/5 lg:aspect-9/16 overflow-hidden rounded-3xl"
     >

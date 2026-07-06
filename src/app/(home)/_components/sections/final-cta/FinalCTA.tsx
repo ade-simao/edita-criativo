@@ -30,7 +30,11 @@ export function FinalCTA() {
           projeto.
         </Text>
 
-        <Button asChild size="lg" className="mt-10 px-10 w-full sm:w-auto">
+        <Button
+          asChild
+          size="lg"
+          className="mt-10 px-10 w-full sm:w-auto transition-all duration-300 hover:scale-110"
+        >
           <Link
             href={whatsapp("Olá! Gostaria de conversar sobre um projeto.")}
             target="_blank"
@@ -46,7 +50,10 @@ export function FinalCTA() {
               target="_blank"
               className="transition hover:text-primary"
             >
-              <FaInstagram size={20} />
+              <FaInstagram
+                size={24}
+                className="transition-all duration-300 hover:scale-130 m-3"
+              />
             </Link>
 
             <Link
@@ -54,7 +61,10 @@ export function FinalCTA() {
               target="_blank"
               className="transition hover:text-primary"
             >
-              <FaFacebookF size={18} />
+              <FaFacebookF
+                size={22}
+                className="transition-all duration-300 hover:scale-130 m-3"
+              />
             </Link>
 
             <Link
@@ -62,7 +72,10 @@ export function FinalCTA() {
               target="_blank"
               className="transition hover:text-primary"
             >
-              <FaLinkedinIn size={18} />
+              <FaLinkedinIn
+                size={22}
+                className="transition-all duration-300 hover:scale-130 m-3"
+              />
             </Link>
 
             <Link
@@ -70,16 +83,19 @@ export function FinalCTA() {
               target="_blank"
               className="transition hover:text-primary"
             >
-              <FaWhatsapp size={20} />
+              <FaWhatsapp
+                size={24}
+                className="transition-all duration-300 hover:scale-130 m-3"
+              />
             </Link>
           </div>
 
-          <div className="mt-8 flex flex-col items-center gap-3 text-sm text-muted-foreground">
+          <div className="mt-8 flex flex-col items-center gap-3 text-muted-foreground">
             <a
               href={`mailto:${CONTACT.email}`}
-              className="flex items-center gap-2 hover:text-primary"
+              className="flex items-center gap-2 hover:text-primary transition-all duration-300 hover:scale-110"
             >
-              <Mail size={16} />
+              <Mail size={18} />
               {CONTACT.email}
             </a>
 

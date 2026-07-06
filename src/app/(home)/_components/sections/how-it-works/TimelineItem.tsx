@@ -14,7 +14,7 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
   const reverse = index % 2 !== 0;
 
   const Card = (
-    <div className="rounded-2xl border border-border bg-card/70 p-8 backdrop-blur transition-all duration-300 lg:translate-y-15 hover:translate-y-7 hover:border-primary hover:shadow-[0_0_40px_rgba(174,76,22,.15)]">
+    <div className="rounded-3xl border border-border bg-card/70 p-8 backdrop-blur transition-all duration-300 lg:translate-y-15 hover:translate-y-7 hover:border-primary hover:shadow-[0_0_40px_rgba(174,76,22,.15)]">
       <div className="inline-flex rounded-xl bg-primary/10 p-4">
         <Icon className="text-primary" size={28} />
       </div>
@@ -37,13 +37,10 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
         y: 0,
         scale: 1,
       }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{
-        duration: 0.8,
+        duration: 0.6,
         ease: "easeOut",
-      }}
-      viewport={{
-        once: false,
-        amount: 0.4,
       }}
       className="relative"
     >
@@ -52,7 +49,7 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
         {reverse ? (
           <>
             <div className="relative">
-              <span className="absolute right-0 top-0 translate-x-13 rounded-full border-4 border-background flex h-6 w-6 items-center justify-center bg-background">
+              <span className="absolute right-0 top-0 translate-x-13.25 rounded-full border-4 border-background flex h-6 w-6 items-center justify-center bg-background">
                 <span className="h-3 w-3 rounded-full bg-primary" />
               </span>
             </div>
@@ -64,7 +61,7 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
             <div className="text-right">{Card}</div>
 
             <div className="relative">
-              <span className="absolute left-0 top-0 -translate-x-13.25 rounded-full border-4 border-background flex h-6 w-6 items-center justify-center bg-background">
+              <span className="absolute left-0 top-0 -translate-x-12.75 rounded-full border-4 border-background flex h-6 w-6 items-center justify-center bg-background">
                 <span className="h-3 w-3 rounded-full bg-primary" />
               </span>
             </div>

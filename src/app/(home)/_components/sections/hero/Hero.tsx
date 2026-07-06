@@ -39,7 +39,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex min-h-screen flex-col items-center justify-center text-center pt-16"
         >
           <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
@@ -59,7 +59,11 @@ export function Hero() {
           </Text>
 
           <div className="mt-12 flex flex-col w-full gap-4 sm:flex-row sm:w-auto">
-            <Button size="lg" asChild>
+            <Button
+              size="lg"
+              asChild
+              className="transition-all duration-300 hover:scale-110"
+            >
               <Link
                 href={whatsapp("Olá! Gostaria de solicitar um orçamento.")}
                 target="_blank"
@@ -68,7 +72,12 @@ export function Hero() {
               </Link>
             </Button>
 
-            <Button size="lg" variant="outline" asChild className="px-7">
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="px-7 transition-all duration-300 hover:scale-110"
+            >
               <Link href={CONTACT.social.instagram} target="_blank">
                 Ver trabalhos
               </Link>
