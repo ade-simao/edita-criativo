@@ -23,10 +23,18 @@ export function HowItWorks() {
           </Text>
         </div>
 
-        <div className="mx-auto mt-24 flex max-w-5xl flex-col gap-20">
-          {steps.map((step, index) => (
-            <TimelineItem key={step.title} index={index} {...step} />
-          ))}
+        <div className="relative mx-auto mt-24 max-w-6xl">
+          {/* Linha Desktop */}
+          <div className="absolute left-1/2 top-0 hidden h-[105.5%] w-px -translate-x-1/2 bg-border lg:block bg-linear-to-b from-primary/40 via-border to-primary/40" />
+
+          {/* Linha Mobile */}
+          <div className="absolute left-5 top-0 h-full w-px bg-border lg:hidden bg-linear-to-b from-primary/40 via-border to-primary/40" />
+
+          <div className="space-y-20 lg:space-y-24">
+            {steps.map((step, index) => (
+              <TimelineItem key={step.title} index={index} {...step} />
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
