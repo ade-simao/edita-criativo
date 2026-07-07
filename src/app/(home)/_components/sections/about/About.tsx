@@ -10,7 +10,7 @@ export function About() {
   return (
     <Section id="about" className="overflow-hidden">
       <Container>
-        <div className="grid items-center gap-20 lg:grid-cols-2">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
           <AboutImage />
           <AboutContent />
         </div>

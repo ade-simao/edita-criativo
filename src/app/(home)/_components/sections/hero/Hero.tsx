@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
@@ -8,13 +9,11 @@ import { Section } from "@/components/layout/Section";
 import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
 
-import { Navbar } from "../../Navbar";
+import { CONTACT, whatsapp } from "@/constants/contact";
 
 export function Hero() {
   return (
     <Section className="relative flex min-h-screen items-center overflow-hidden py-0">
-      <Navbar />
-
       {/* Background */}
       <div className="absolute inset-0 -z-20 bg-neutral-950" />
 
@@ -40,32 +39,48 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex min-h-screen flex-col items-center justify-center text-center"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex min-h-screen flex-col items-center justify-center text-center pt-16"
         >
-          {/* <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+          <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
             Edita Criativo
-          </span> */}
+          </span>
 
           <Heading
             as="h1"
-            className="max-w-5xl text-4xl font-extrabold md:text-7xl xl:text-7xl 2xl:text-8xl"
+            className="max-w-5xl font-extrabold text-4xl sm:text-5xl lg:text-7xl"
           >
             Transformamos vídeos em conteúdos que prendem atenção.
           </Heading>
 
-          <Text className="mt-8 max-w-2xl text-lg md:text-xl">
+          <Text className="mt-8 max-w-2xl text-base sm:text-lg lg:text-xl">
             Edição profissional para criadores, empresas e marcas que querem
             comunicar com mais impacto.
           </Text>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" className="text-white">
-              Solicitar orçamento
+          <div className="mt-12 flex flex-col w-full gap-4 sm:flex-row sm:w-auto">
+            <Button
+              size="lg"
+              asChild
+              className="transition-all duration-300 hover:scale-110"
+            >
+              <Link
+                href={whatsapp("Olá! Gostaria de solicitar um orçamento.")}
+                target="_blank"
+              >
+                Solicitar orçamento
+              </Link>
             </Button>
 
-            <Button size="lg" variant="outline">
-              Ver trabalhos
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="px-7 transition-all duration-300 hover:scale-110"
+            >
+              <Link href={CONTACT.social.instagram} target="_blank">
+                Ver trabalhos
+              </Link>
             </Button>
           </div>
         </motion.div>
@@ -74,7 +89,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="hidden absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
             <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>

@@ -17,7 +17,7 @@ import { faqs } from "./data";
 export function FAQ() {
   return (
     <Section id="faq">
-      <Container className="max-w-4xl">
+      <Container className="max-w-3xl">
         <div className="text-center">
           <Heading className="font-semibold uppercase tracking-[.3em] text-primary">
             Perguntas Frequentes

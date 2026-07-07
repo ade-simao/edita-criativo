@@ -15,20 +15,23 @@ export function ServiceCard({ icon: Icon, title, description, index }: Props) {
     <motion.article
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{
         duration: 0.6,
-        delay: index * 0.15,
+        delay: index * 0.2,
+        ease: "easeOut",
       }}
-      className="group rounded-2xl border border-border bg-card/60 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary/40"
+      className="group h-full"
     >
-      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
-        <Icon className="h-7 w-7 text-primary" />
+      <div className="w-full h-full p-8 rounded-3xl border border-border bg-card/60 backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-[0_0_40px_rgba(174,76,22,.15)]">
+        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10">
+          <Icon className="h-7 w-7 text-primary" />
+        </div>
+
+        <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
+
+        <p className="leading-7 text-muted-foreground">{description}</p>
       </div>
-
-      <h3 className="mb-4 text-2xl font-semibold">{title}</h3>
-
-      <p className="leading-7 text-muted-foreground">{description}</p>
     </motion.article>
   );
 }
