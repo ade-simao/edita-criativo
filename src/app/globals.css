@@ -90,7 +90,7 @@ html.lenis body {
 }
 
 /* ------------------------------------------------ */
-/* Scrollbar */
+/* Cinematic Scrollbar */
 /* ------------------------------------------------ */
 
 html {
@@ -98,40 +98,37 @@ html {
 }
 
 body {
-  text-rendering: optimizeLegibility;
-
-  -webkit-font-smoothing: antialiased;
-
-  -moz-osx-font-smoothing: grayscale;
+  overflow-y: overlay;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to bottom,
-    hsl(var(--primary)),
-    hsl(var(--primary) / 0.7)
-  );
+  border-radius: 999px;
 
-  border-radius: 9999px;
+  background: transparent;
 
-  border: 3px solid hsl(var(--background));
+  transition:
+    background 0.35s,
+    opacity 0.35s;
+}
 
-  transition: background 0.3s;
+html:hover::-webkit-scrollbar-thumb,
+body:hover::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.35);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary));
+  background: hsl(var(--primary) / 0.65);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+  scrollbar-color: transparent transparent;
 }
