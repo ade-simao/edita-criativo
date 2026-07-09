@@ -12,10 +12,12 @@ import { Container } from "@/components/layout/Container";
 import { whatsapp } from "@/constants/contact";
 
 const links = [
-  { id: "services", label: "Serviços" },
   { id: "about", label: "Quem Somos" },
+  { id: "services", label: "Serviços" },
   { id: "portfolio", label: "Portfólio" },
   { id: "pricing", label: "Planos" },
+  { id: "faq", label: "FAQ" },
+  { id: "contact", label: "Contacto" },
 ];
 
 export function Navbar() {

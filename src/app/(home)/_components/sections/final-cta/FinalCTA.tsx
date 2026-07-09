@@ -19,7 +19,7 @@ import { CONTACT, whatsapp } from "@/constants/contact";
 
 export function FinalCTA() {
   return (
-    <Section className="relative overflow-hidden">
+    <Section id="contact" className="relative overflow-hidden">
       <Container className="text-center">
         <Heading className="font-semibold capitalize tracking-[.2em] text-3xl text-primary mx-auto max-w-3xl">
           Vamos transformar o seu próximo vídeo em algo memorável.
