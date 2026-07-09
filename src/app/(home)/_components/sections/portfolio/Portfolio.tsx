@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { Heading } from "@/components/typography/Heading";
@@ -7,8 +9,13 @@ import { Text } from "@/components/typography/Text";
 
 import { portfolio } from "./data";
 import { PortfolioCard } from "./PortfolioCard";
+import { PortfolioModal } from "./PortfolioModal";
 
 export function Portfolio() {
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof portfolio)[number] | null
+  >(null);
+
   return (
     <Section id="portfolio">
       <Container>
@@ -25,10 +32,23 @@ export function Portfolio() {
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {portfolio.map((item, index) => (
-            <PortfolioCard key={item.title} index={index} {...item} />
+            <PortfolioCard
+              key={item.title}
+              index={index}
+              {...item}
+              onClick={() => setSelectedProject(item)}
+            />
           ))}
         </div>
       </Container>
+
+      <PortfolioModal
+        open={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+        title={selectedProject?.title ?? ""}
+        video={selectedProject?.video ?? ""}
+        description={selectedProject?.description ?? ""}
+      />
     </Section>
   );
 }
