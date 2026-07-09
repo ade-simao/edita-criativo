@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -42,6 +42,8 @@ export function Testimonials() {
     setTimeout(() => setPaused(false), 5000);
   };
 
+  const swipeThreshold = 80;
+
   const visibleTestimonials = () => {
     const visible =
       typeof window !== "undefined"
@@ -72,8 +74,12 @@ export function Testimonials() {
 
         <div
           className="relative mt-20"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
+          onMouseEnter={() => {
+            setPaused(true);
+          }}
+          onMouseLeave={() => {
+            setPaused(false);
+          }}
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -85,7 +91,19 @@ export function Testimonials() {
                 duration: 0.45,
                 ease: "easeOut",
               }}
-              className="flex justify-center"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.15}
+              onDragEnd={(_, info: PanInfo) => {
+                if (info.offset.x < -swipeThreshold) {
+                  next();
+                }
+
+                if (info.offset.x > swipeThreshold) {
+                  previous();
+                }
+              }}
+              className="flex justify-center cursor-grab active:cursor-grabbing"
             >
               <div className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {visibleTestimonials().map((item) => (
@@ -114,6 +132,7 @@ export function Testimonials() {
 
           <button
             onClick={previous}
+            aria-label="Testemunho anterior"
             className="absolute top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
             <ChevronLeft size={20} />
@@ -121,10 +140,24 @@ export function Testimonials() {
 
           <button
             onClick={next}
+            aria-label="Próximo testemunho"
             className="absolute top-1/2 right-2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
             <ChevronRight size={20} />
           </button>
+
+          <div className="mx-auto mt-8 h-1 w-40 overflow-hidden rounded-full bg-border">
+            <motion.div
+              key={current}
+              initial={{ width: 0 }}
+              animate={{ width: paused ? 0 : "100%" }}
+              transition={{
+                duration: 5,
+                ease: "linear",
+              }}
+              className="h-full rounded-full bg-primary"
+            />
+          </div>
         </div>
       </Container>
     </Section>

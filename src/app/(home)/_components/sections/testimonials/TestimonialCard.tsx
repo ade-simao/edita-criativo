@@ -9,49 +9,11 @@ type Props = {
 
 export function TestimonialCard({ name, role, image, comment }: Props) {
   return (
-    <article
-      className="
-group
-relative
-h-full
-rounded-3xl
-border
-border-border/60
-bg-card/60
-p-8
-backdrop-blur
-
-transition-all
-duration-500
-
-hover:-translate-y-2
-hover:border-primary/40
-hover:shadow-2xl
-"
-    >
-      <div
-        className="
-    mb-6
-    text-6xl
-    font-serif
-    leading-none
-    text-primary/20
-    transition-colors
-    duration-300
-    group-hover:text-primary/40
-  "
-      >
+    <article className="group relative h-full rounded-3xl border border-border/60 bg-card/60 p-8 backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-2xl">
+      <div className="mb-6 text-6xl font-serif leading-none text-primary/20 transition-colors duration-300 group-hover:text-primary/40">
         “
       </div>
-      <p
-        className="
-leading-8
-text-muted-foreground min-h-32
-transition-colors
-duration-300
-group-hover:text-foreground
-"
-      >
+      <p className="leading-8 text-muted-foreground min-h-32 transition-colors duration-300 group-hover:text-foreground">
         {comment}
       </p>
 
@@ -69,26 +31,11 @@ group-hover:text-foreground
           alt={name}
           width={56}
           height={56}
-          className="
-rounded-full
-object-cover
-ring-2
-ring-border
-transition-all
-duration-300
-group-hover:ring-primary
-"
+          className="rounded-full object-cover ring-2 ring-border transition-all duration-300 group-hover:ring-primary"
         />
 
         <div>
-          <h4
-            className="
-font-semibold
-transition-colors
-duration-300
-group-hover:text-primary
-"
-          >
+          <h4 className="font-semibold transition-colors duration-300 group-hover:text-primary">
             {name}
           </h4>
 
