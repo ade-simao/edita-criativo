@@ -1,4 +1,4 @@
-import { Navbar } from "./_components/Navbar";
+import { Navbar } from "./_components/layout/Navbar";
 import { About } from "./_components/sections/about";
 import { Differentials } from "./_components/sections/differentials";
 import { FAQ } from "./_components/sections/faq";
