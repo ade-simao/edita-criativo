@@ -44,7 +44,9 @@ export function Portfolio() {
 
       <PortfolioModal
         open={selectedProject !== null}
-        onClose={() => setSelectedProject(null)}
+        onClose={() => {
+          setSelectedProject(null);
+        }}
         title={selectedProject?.title ?? ""}
         video={selectedProject?.video ?? ""}
         description={selectedProject?.description ?? ""}

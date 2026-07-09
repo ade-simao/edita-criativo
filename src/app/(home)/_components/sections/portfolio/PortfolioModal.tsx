@@ -90,8 +90,15 @@ export function PortfolioModal({
                     title={title}
                     allowFullScreen
                     loading="lazy"
+                    allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     className="h-full w-full"
                   />
+                </div>
+
+                <div className="mb-3 flex items-center gap-3">
+                  <span className=" rounded-full bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-primary">
+                    Projeto
+                  </span>
                 </div>
 
                 <div className="p-5 md:p-8">
