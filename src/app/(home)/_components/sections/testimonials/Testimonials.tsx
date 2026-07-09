@@ -42,6 +42,21 @@ export function Testimonials() {
     setTimeout(() => setPaused(false), 5000);
   };
 
+  const visibleTestimonials = () => {
+    const visible =
+      typeof window !== "undefined"
+        ? window.innerWidth >= 1280
+          ? 3
+          : window.innerWidth >= 768
+            ? 2
+            : 1
+        : 3;
+
+    return Array.from({ length: visible }, (_, i) => {
+      return testimonials[(current + i) % testimonials.length];
+    });
+  };
+
   return (
     <Section id="testimonials" className="overflow-hidden">
       <Container>
@@ -72,58 +87,41 @@ export function Testimonials() {
               }}
               className="flex justify-center"
             >
-              <TestimonialCard {...testimonials[current]} />
+              <div className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {visibleTestimonials().map((item) => (
+                  <TestimonialCard key={item.name} {...item} />
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
 
+          <div className="mt-10 flex justify-center gap-3">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setPaused(true);
+                  setCurrent(index);
+
+                  setTimeout(() => setPaused(false), 5000);
+                }}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index ? "w-8 bg-primary" : "w-2 bg-muted"
+                }`}
+              />
+            ))}
+          </div>
+
           <button
             onClick={previous}
-            className="
-      absolute
-      left-0
-      top-1/2
-      -translate-y-1/2
-
-      rounded-full
-
-      border
-
-      bg-background/80
-
-      p-3
-
-      backdrop-blur
-
-      transition
-
-      hover:border-primary
-    "
+            className="absolute top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
             <ChevronLeft size={20} />
           </button>
 
           <button
             onClick={next}
-            className="
-      absolute
-      right-0
-      top-1/2
-      -translate-y-1/2
-
-      rounded-full
-
-      border
-
-      bg-background/80
-
-      p-3
-
-      backdrop-blur
-
-      transition
-
-      hover:border-primary
-    "
+            className="absolute top-1/2 right-2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
             <ChevronRight size={20} />
           </button>
