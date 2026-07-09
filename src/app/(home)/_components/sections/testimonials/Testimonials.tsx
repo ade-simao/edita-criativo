@@ -15,6 +15,8 @@ import { TestimonialCard } from "./TestimonialCard";
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [resumeId, setResumeId] = useState<NodeJS.Timeout | null>(null);
+  const [visibleCards, setVisibleCards] = useState(3);
 
   useEffect(() => {
     if (paused) return;
@@ -27,37 +29,57 @@ export function Testimonials() {
   }, [paused]);
 
   const next = () => {
-    setPaused(true);
+    pauseAutoplay();
 
     setCurrent((prev) => (prev + 1) % testimonials.length);
-
-    setTimeout(() => setPaused(false), 5000);
   };
 
   const previous = () => {
-    setPaused(true);
+    pauseAutoplay();
 
     setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-
-    setTimeout(() => setPaused(false), 5000);
   };
+
+  const pauseAutoplay = () => {
+    setPaused(true);
+
+    if (resumeId) {
+      clearTimeout(resumeId);
+    }
+
+    const timeout = setTimeout(() => {
+      setPaused(false);
+    }, 5000);
+
+    setResumeId(timeout);
+  };
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth >= 1280) {
+        setVisibleCards(3);
+      } else if (window.innerWidth >= 768) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(1);
+      }
+    };
+
+    updateVisibleCards();
+
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleCards);
+    };
+  }, []);
 
   const swipeThreshold = 80;
 
-  const visibleTestimonials = () => {
-    const visible =
-      typeof window !== "undefined"
-        ? window.innerWidth >= 1280
-          ? 3
-          : window.innerWidth >= 768
-            ? 2
-            : 1
-        : 3;
-
-    return Array.from({ length: visible }, (_, i) => {
-      return testimonials[(current + i) % testimonials.length];
-    });
-  };
+  const visibleTestimonials = Array.from(
+    { length: visibleCards },
+    (_, i) => testimonials[(current + i) % testimonials.length],
+  );
 
   return (
     <Section id="testimonials" className="overflow-hidden">
@@ -72,15 +94,7 @@ export function Testimonials() {
           </Text>
         </div>
 
-        <div
-          className="relative mt-20"
-          onMouseEnter={() => {
-            setPaused(true);
-          }}
-          onMouseLeave={() => {
-            setPaused(false);
-          }}
-        >
+        <div className="relative mt-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -90,6 +104,9 @@ export function Testimonials() {
               transition={{
                 duration: 0.45,
                 ease: "easeOut",
+              }}
+              whileTap={{
+                cursor: "grabbing",
               }}
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
@@ -105,8 +122,16 @@ export function Testimonials() {
               }}
               className="flex justify-center cursor-grab active:cursor-grabbing"
             >
-              <div className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {visibleTestimonials().map((item) => (
+              <div
+                className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3"
+                onMouseEnter={() => {
+                  setPaused(true);
+                }}
+                onMouseLeave={() => {
+                  setPaused(false);
+                }}
+              >
+                {visibleTestimonials.map((item) => (
                   <TestimonialCard key={item.name} {...item} />
                 ))}
               </div>
@@ -118,11 +143,10 @@ export function Testimonials() {
               <button
                 key={index}
                 onClick={() => {
-                  setPaused(true);
+                  pauseAutoplay();
                   setCurrent(index);
-
-                  setTimeout(() => setPaused(false), 5000);
                 }}
+                aria-label={`Ir para testemunho ${index + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   current === index ? "w-8 bg-primary" : "w-2 bg-muted"
                 }`}
@@ -133,7 +157,7 @@ export function Testimonials() {
           <button
             onClick={previous}
             aria-label="Testemunho anterior"
-            className="absolute top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+            className="absolute top-1/2 left-2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
           >
             <ChevronLeft size={20} />
           </button>
@@ -150,9 +174,11 @@ export function Testimonials() {
             <motion.div
               key={current}
               initial={{ width: 0 }}
-              animate={{ width: paused ? 0 : "100%" }}
+              animate={{
+                width: paused ? undefined : "100%",
+              }}
               transition={{
-                duration: 5,
+                duration: paused ? 0 : 5,
                 ease: "linear",
               }}
               className="h-full rounded-full bg-primary"
