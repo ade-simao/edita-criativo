@@ -55,7 +55,7 @@ export function PortfolioModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm p-6"
           onClick={onClose}
         >
           <motion.div
@@ -75,7 +75,7 @@ export function PortfolioModal({
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-5xl rounded-3xl border border-border bg-background overflow-hidden"
+                className="relative max-h-screen w-full max-w-5xl rounded-3xl border border-border bg-background overflow-auto"
               >
                 <button
                   onClick={onClose}
@@ -90,27 +90,27 @@ export function PortfolioModal({
                     title={title}
                     allowFullScreen
                     loading="lazy"
-                    allow=" accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     className="h-full w-full"
                   />
                 </div>
 
-                <div className="mb-3 flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <span className=" rounded-full bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-primary">
                     Projeto
                   </span>
-                </div>
+                </div> */}
 
-                <div className="p-5 md:p-8">
+                <div className="p-2">
                   <h3 className="text-xl md:text-2xl font-bold">{title}</h3>
 
-                  <p className="mt-4 text-muted-foreground">{description}</p>
+                  <p className="mt-1 text-muted-foreground">{description}</p>
 
                   <a
                     href={video}
                     target="_blank"
                     rel="noreferrer"
-                    className=" mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:scale-105"
+                    className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-medium text-primary-foreground transition hover:scale-105"
                   >
                     Ver Projeto
                     <ExternalLink size={16} />
