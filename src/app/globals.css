@@ -88,3 +88,47 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+/* ------------------------------------------------ */
+/* Cinematic Scrollbar */
+/* ------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: transparent;
+
+  transition:
+    background 0.35s,
+    opacity 0.35s;
+}
+
+html:hover::-webkit-scrollbar-thumb,
+body:hover::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.35);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.65);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}

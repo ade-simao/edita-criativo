@@ -1,29 +1,29 @@
 export const testimonials = [
   {
-    name: "João Pedro",
-    role: "Criador de Conteúdo",
-    image: "/images/testimonials/user-1.jpg",
+    name: "André Simão",
+    role: "Web Developer",
+    image: "/images/testimonials/user-1.jpeg",
     comment:
       "A qualidade da edição elevou completamente o nível do meu conteúdo.",
   },
   {
-    name: "Maria Silva",
+    name: "Raquel Cunha",
     role: "Empresária",
-    image: "/images/testimonials/user-2.jpg",
+    image: "/images/testimonials/user-2.jpeg",
     comment:
       "Profissionalismo, rapidez e um resultado muito acima das expectativas.",
   },
   {
-    name: "Carlos Mendes",
-    role: "Marketing",
-    image: "/images/testimonials/user-3.jpg",
+    name: "Mundo Da Programação",
+    role: "Tecnologia",
+    image: "/images/testimonials/user-3.jpeg",
     comment:
       "Os nossos vídeos passaram a transmitir muito mais valor para a marca.",
   },
   {
-    name: "Joana Dos Santos",
-    role: "Palestrante",
-    image: "/images/testimonials/user-4.jpg",
+    name: "Filipe Mesquita",
+    role: "Contablista",
+    image: "/images/testimonials/user-4.jpeg",
     comment:
       "Velocidade, proficionalismo e um resultado muito acima das expectativas.",
   },

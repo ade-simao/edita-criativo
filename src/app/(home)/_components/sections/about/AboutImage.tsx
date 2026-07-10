@@ -11,15 +11,15 @@ export function AboutImage() {
       viewport={{ once: false, amount: 0.3 }}
       transition={{
         duration: 0.8,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative aspect-square max-w-xl w-full mx-auto overflow-hidden rounded-3xl"
+      className="group relative aspect-square max-w-xl w-full mx-auto overflow-hidden rounded-3xl"
     >
       <Image
         src="/images/about/morais.jpg"
         alt="Edita Criativo"
         fill
-        className="object-top"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
 
       <div className="absolute inset-0 bg-linear-to-t from-background via-transparent" />

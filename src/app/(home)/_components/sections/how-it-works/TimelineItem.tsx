@@ -40,7 +40,7 @@ export function TimelineItem({ icon: Icon, title, description, index }: Props) {
       viewport={{ once: false, amount: 0.3 }}
       transition={{
         duration: 0.6,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }}
       className="relative"
     >

@@ -1,6 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, PanInfo } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { Container } from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
@@ -11,6 +13,74 @@ import { testimonials } from "./data";
 import { TestimonialCard } from "./TestimonialCard";
 
 export function Testimonials() {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [resumeId, setResumeId] = useState<NodeJS.Timeout | null>(null);
+  const [visibleCards, setVisibleCards] = useState(3);
+
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [paused]);
+
+  const next = () => {
+    pauseAutoplay();
+
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const previous = () => {
+    pauseAutoplay();
+
+    setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  };
+
+  const pauseAutoplay = () => {
+    setPaused(true);
+
+    if (resumeId) {
+      clearTimeout(resumeId);
+    }
+
+    const timeout = setTimeout(() => {
+      setPaused(false);
+    }, 5000);
+
+    setResumeId(timeout);
+  };
+
+  useEffect(() => {
+    const updateVisibleCards = () => {
+      if (window.innerWidth >= 1280) {
+        setVisibleCards(3);
+      } else if (window.innerWidth >= 768) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(1);
+      }
+    };
+
+    updateVisibleCards();
+
+    window.addEventListener("resize", updateVisibleCards);
+
+    return () => {
+      window.removeEventListener("resize", updateVisibleCards);
+    };
+  }, []);
+
+  const swipeThreshold = 80;
+
+  const visibleTestimonials = Array.from(
+    { length: visibleCards },
+    (_, i) => testimonials[(current + i) % testimonials.length],
+  );
+
   return (
     <Section id="testimonials" className="overflow-hidden">
       <Container>
@@ -24,19 +94,97 @@ export function Testimonials() {
           </Text>
         </div>
 
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 35,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="mt-20 flex w-max gap-6 lg:gap-8"
-        >
-          {[...testimonials, ...testimonials].map((item, index) => (
-            <TestimonialCard key={index} {...item} />
-          ))}
-        </motion.div>
+        <div className="relative mt-20">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -60 }}
+              transition={{
+                duration: 0.45,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              whileTap={{
+                cursor: "grabbing",
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.15}
+              onDragEnd={(_, info: PanInfo) => {
+                if (info.offset.x < -swipeThreshold) {
+                  next();
+                }
+
+                if (info.offset.x > swipeThreshold) {
+                  previous();
+                }
+              }}
+              className="flex justify-center cursor-grab active:cursor-grabbing"
+            >
+              <div
+                className="grid w-full gap-6 md:grid-cols-2 xl:grid-cols-3"
+                onMouseEnter={() => {
+                  setPaused(true);
+                }}
+                onMouseLeave={() => {
+                  setPaused(false);
+                }}
+              >
+                {visibleTestimonials.map((item) => (
+                  <TestimonialCard key={item.name} {...item} />
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="mt-10 flex justify-center gap-3">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  pauseAutoplay();
+                  setCurrent(index);
+                }}
+                aria-label={`Ir para testemunho ${index + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index ? "w-8 bg-primary" : "w-2 bg-muted"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={previous}
+            aria-label="Testemunho anterior"
+            className="absolute top-1/2 left-2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <button
+            onClick={next}
+            aria-label="Próximo testemunho"
+            className="absolute top-1/2 right-2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            <ChevronRight size={20} />
+          </button>
+
+          <div className="mx-auto mt-8 h-1 w-40 overflow-hidden rounded-full bg-border">
+            <motion.div
+              key={current}
+              initial={{ width: 0 }}
+              animate={{
+                width: paused ? undefined : "100%",
+              }}
+              transition={{
+                duration: paused ? 0 : 5,
+                ease: "linear",
+              }}
+              className="h-full rounded-full bg-primary"
+            />
+          </div>
+        </div>
       </Container>
     </Section>
   );
