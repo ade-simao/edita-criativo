@@ -19,7 +19,7 @@ export function ServiceCard({ icon: Icon, title, description, index }: Props) {
       transition={{
         duration: 0.6,
         delay: index * 0.2,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }}
       className="group h-full"
     >

@@ -64,7 +64,7 @@ export function PortfolioModal({
             exit={{ scale: 0.95, opacity: 0, y: 30 }}
             transition={{
               duration: 0.35,
-              ease: "easeOut",
+              ease: [0.22, 1, 0.36, 1],
             }}
             onClick={(e) => e.stopPropagation()}
             className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-border bg-background shadow-2xl"

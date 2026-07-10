@@ -13,7 +13,7 @@ export function AboutContent() {
       viewport={{ once: false, amount: 0.3 }}
       transition={{
         duration: 0.8,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }}
     >
       <span className="font-semibold uppercase tracking-[.3em] text-primary">

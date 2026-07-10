@@ -33,7 +33,7 @@ export function PricingCard({
       transition={{
         duration: 0.6,
         delay: index * 0.2,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       }}
     >
       <div

@@ -65,10 +65,10 @@ export function Navbar() {
               key={link.id}
               href={`#${link.id}`}
               className={cn(
-                "relative text-sm transition-colors duration-300",
+                `relative py-0.5 text-sm transition-all duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:rounded-full after:bg-primary after:transition-all after:duration-300`,
                 activeSection === link.id
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground",
+                  ? "text-primary after:w-full"
+                  : "text-muted-foreground after:w-0 hover:text-foreground hover:after:w-full",
               )}
             >
               {link.label}

@@ -103,7 +103,7 @@ export function Testimonials() {
               exit={{ opacity: 0, x: -60 }}
               transition={{
                 duration: 0.45,
-                ease: "easeOut",
+                ease: [0.22, 1, 0.36, 1],
               }}
               whileTap={{
                 cursor: "grabbing",

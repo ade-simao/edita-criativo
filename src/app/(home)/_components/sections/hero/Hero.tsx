@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex min-h-screen flex-col items-center justify-center text-center pt-16"
+          className="flex min-h-screen flex-col items-center justify-center text-center pt-12"
         >
           <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
             Edita Criativo
