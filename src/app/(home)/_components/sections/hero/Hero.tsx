@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex min-h-screen flex-col items-center justify-center text-center pt-12"
+          className="flex min-h-screen flex-col items-center justify-center text-center pt-14"
         >
           <span className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-primary">
             Edita Criativo
@@ -55,7 +55,7 @@ export function Hero() {
 
           <Text className="mt-8 max-w-2xl text-base sm:text-lg lg:text-xl">
             Edição profissional para criadores, empresas e marcas que querem
-            comunicar com mais impacto.
+            comunicar com mais impacto e converter vídeos em clientes.
           </Text>
 
           <div className="mt-12 flex flex-col w-full gap-4 sm:flex-row sm:w-auto">

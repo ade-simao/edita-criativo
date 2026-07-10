@@ -12,7 +12,7 @@ export const faqs = [
   {
     question: "Posso solicitar alterações após receber a primeira versão?",
     answer:
-      "Sim. Acreditamos que um bom resultado nasce da colaboração. Todos os projetos incluem revisões de acordo com o briefing inicial, permitindo ajustar detalhes e garantir que o material final represente a sua marca da melhor forma possível.",
+      "Sim. Acreditamos que um bom resultado nasce da colaboração. Todos os projetos incluem revisões de acordo com o briefing inicial, permitindo ajustar detalhes e garantir que o material final represente a sua marca da melhor forma possível. Tem direito a duas rodadas de alterações.",
   },
   {
     question: "Trabalham apenas em Angola?",
@@ -27,6 +27,6 @@ export const faqs = [
   {
     question: "Como funciona o pagamento?",
     answer:
-      "Após a aprovação do orçamento, definimos a forma de pagamento mais adequada ao projeto. Dependendo da dimensão do trabalho, o valor pode ser dividido por etapas. Todos os detalhes são apresentados com transparência antes do início da produção.",
+      "Após a aprovação do orçamento, definimos a forma de pagamento mais adequada ao projeto. Dependendo da dimensão do trabalho, o valor pode ser dividido por etapas. Todos os detalhes são apresentados com transparência antes do início da produção. Suportamos Express, Tranferências normais e internacionais (PayPal)",
   },
 ];

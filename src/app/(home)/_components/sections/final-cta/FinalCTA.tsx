@@ -79,7 +79,7 @@ export function FinalCTA() {
             </Link>
 
             <Link
-              href={CONTACT.social.instagram}
+              href={whatsapp("Olá! Gostaria de conversar sobre um projeto.")}
               target="_blank"
               className="transition hover:text-primary"
             >
