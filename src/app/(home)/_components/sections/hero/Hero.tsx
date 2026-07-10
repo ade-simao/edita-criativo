@@ -31,7 +31,7 @@ export function Hero() {
         />
       </video>
 
-      <div className="absolute inset-0 -z-10 bg-black/80" />
+      <div className="absolute inset-0 -z-10 bg-black/60 backdrop-blur-[1px]" />
 
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-black/30 via-black/60 to-background/70" />
 
