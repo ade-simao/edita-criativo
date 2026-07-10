@@ -10,6 +10,7 @@ import { Heading } from "@/components/typography/Heading";
 import { Text } from "@/components/typography/Text";
 
 import { CONTACT, whatsapp } from "@/constants/contact";
+import { trackCTA, trackWhatsApp } from "@/lib/analytics";
 
 export function Hero() {
   return (
@@ -63,6 +64,10 @@ export function Hero() {
               size="lg"
               asChild
               className="transition-all duration-300 hover:scale-110"
+              onClick={() => {
+                trackCTA("hero_primary");
+                trackWhatsApp("hero");
+              }}
             >
               <Link
                 href={whatsapp("Olá! Gostaria de solicitar um orçamento.")}
@@ -77,6 +82,7 @@ export function Hero() {
               variant="outline"
               asChild
               className="px-7 transition-all duration-300 hover:scale-110"
+              onClick={() => trackCTA("hero_portfolio")}
             >
               <Link href={CONTACT.social.instagram} target="_blank">
                 Ver trabalhos

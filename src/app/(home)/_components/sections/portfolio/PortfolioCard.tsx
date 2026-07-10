@@ -23,11 +23,13 @@ export function PortfolioCard({
 }: Props) {
   return (
     <motion.article
-      onClick={onClick}
       role="button"
+      aria-label={`Abrir projeto ${title}`}
       tabIndex={0}
+      onClick={onClick}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
           onClick();
         }
       }}

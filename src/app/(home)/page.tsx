@@ -1,3 +1,5 @@
+import { AnalyticsProvider } from "@/components/providers/AnalyticsProvider";
+
 import { Navbar } from "./_components/layout/Navbar";
 import { About } from "./_components/sections/about";
 import { Differentials } from "./_components/sections/differentials";
@@ -12,18 +14,22 @@ import { Testimonials } from "./_components/sections/testimonials";
 
 export default function HomePage() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <Differentials />
-      <Portfolio />
-      <HowItWorks />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
-    </main>
+    <>
+      <AnalyticsProvider />
+
+      <main>
+        <Navbar />
+        <Hero />
+        <Services />
+        <About />
+        <Differentials />
+        <Portfolio />
+        <HowItWorks />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <FinalCTA />
+      </main>
+    </>
   );
 }

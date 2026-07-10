@@ -10,6 +10,7 @@ import { Text } from "@/components/typography/Text";
 import { portfolio } from "./data";
 import { PortfolioCard } from "./PortfolioCard";
 import { PortfolioModal } from "./PortfolioModal";
+import { trackPortfolio } from "@/lib/analytics";
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<
@@ -36,7 +37,10 @@ export function Portfolio() {
               key={item.title}
               index={index}
               {...item}
-              onClick={() => setSelectedProject(item)}
+              onClick={() => {
+                trackPortfolio(item.title);
+                setSelectedProject(item);
+              }}
             />
           ))}
         </div>
