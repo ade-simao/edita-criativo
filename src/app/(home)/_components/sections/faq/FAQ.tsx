@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -15,8 +17,11 @@ import { Section } from "@/components/layout/Section";
 import { Text } from "@/components/typography/Text";
 
 import { faqs } from "./data";
+import { trackFAQ } from "@/lib/analytics";
 
 export function FAQ() {
+  const trackedQuestions = useRef(new Set<string>());
+
   return (
     <Section id="faq">
       <Container className="max-w-4xl">
@@ -31,7 +36,20 @@ export function FAQ() {
           </Text>
         </div>
 
-        <Accordion type="single" collapsible className="mt-20 space-y-5">
+        <Accordion
+          onValueChange={(value) => {
+            if (!value) return;
+
+            if (trackedQuestions.current.has(value)) return;
+
+            trackedQuestions.current.add(value);
+
+            trackFAQ(value);
+          }}
+          type="single"
+          collapsible
+          className="mt-20 space-y-5"
+        >
           {faqs.map((faq) => (
             <AccordionItem
               key={faq.question}
@@ -61,7 +79,7 @@ export function FAQ() {
                 </div>
               </AccordionTrigger>
 
-              <AccordionContent className="pb-7 pl-[60px] text-base leading-8 text-muted-foreground">
+              <AccordionContent className="pb-7 pl-15 text-base leading-8 text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

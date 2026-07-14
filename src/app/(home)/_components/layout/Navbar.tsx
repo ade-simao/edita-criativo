@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { Container } from "@/components/layout/Container";
+import { trackWhatsApp } from "@/lib/analytics";
 
 const links = [
   { id: "about", label: "Quem Somos" },
@@ -87,6 +88,7 @@ export function Navbar() {
           <Button asChild>
             <Link
               href={whatsapp("Olá! Vim pelo site e gostaria de um orçamento.")}
+              onClick={() => trackWhatsApp("navbar")}
               target="_blank"
             >
               Falar agora

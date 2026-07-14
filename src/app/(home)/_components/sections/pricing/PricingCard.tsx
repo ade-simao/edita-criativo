@@ -7,6 +7,7 @@ import { Check } from "./data";
 import { Button } from "@/components/ui/button";
 
 import { whatsapp } from "@/constants/contact";
+import { trackPlan, trackWhatsApp } from "@/lib/analytics";
 
 type Props = {
   title: string;
@@ -58,6 +59,10 @@ export function PricingCard({
         <Button
           asChild
           className="mt-auto w-full transition-all duration-300 hover:scale-110"
+          onClick={() => {
+            trackPlan(title);
+            trackWhatsApp(`pricing_${title.toLowerCase()}`);
+          }}
         >
           <Link
             href={whatsapp(`Olá! Tenho interesse no plano ${title}.`)}
