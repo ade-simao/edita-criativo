@@ -54,6 +54,7 @@ export function VisitorsChart() {
               }}
               activeDot={{
                 r: 6,
+                fill: "green",
               }}
             />
           </AreaChart>
